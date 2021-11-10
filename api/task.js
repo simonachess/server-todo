@@ -39,7 +39,7 @@ handlers._task.post = async (data, callback) => {
 
 handlers._task.put = async (data, callback) => {
     // atnaujinam user info
-    console.log("task.put")
+    console.log("task.put");
 }
 
 handlers._task.delete = async (data, callback) => {
@@ -49,7 +49,7 @@ handlers._task.delete = async (data, callback) => {
     console.log(payload)
 
     try {
-        const query = "DELETE FROM `tasks` WHERE `tasks`.`id` =" + payload;
+        const query = "DELETE FROM `tasks` WHERE `id` =" + payload;
         await db.execute(query);
         return callback(200, "Succeded to delete task!")
     } catch (error) {
@@ -58,5 +58,22 @@ handlers._task.delete = async (data, callback) => {
         return callback(404, "Failed to delete task!");
     }
 }
+
+handlers._task.get = async (data, callback) => {
+    // istrinam user info
+    const db = data.db;
+    const payload = data.queryStringObject;
+
+    try {
+        const query = "SELECT * FROM `tasks` WHERE `id`=" + payload.get("id");
+        const dataFromDB = await db.execute(query);
+        return callback(200, dataFromDB[0][0])
+    } catch (error) {
+        console.log('Nepavyko gauti duomenu');
+        console.log(error);
+        return callback(404, "Failed to get task!");
+    }
+}
+
 
 module.exports = handlers;

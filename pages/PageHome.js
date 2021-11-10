@@ -52,7 +52,7 @@ class PageHome extends Page {
             result += `
                 <tr>
                     <td>${task.id}</td>
-                    <td>${task.text}</td>
+                    <td>${task.text.slice(0, 10)}...</td>
                     <td>${task.status}</td>
                     <td>${dateString}</td>
                     <td>
@@ -64,6 +64,9 @@ class PageHome extends Page {
         }
         return result;
     }
+
+
+
 
     async bodyHTML() {
         const array = await this.getData();
@@ -83,7 +86,26 @@ class PageHome extends Page {
                     ${this.createTaskList(array)}
                     </table>
             </div>
-            <script src="js/home.js"></script> ;
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form>
+                        <label for="id">ID</lable>
+                        <input id="id" type="number" readonly>
+                        <label for="text">Text field</label>
+                        <textarea id="text" placeholder="Add new task here..."></textarea>
+                        <span class="focus-text-area"></span>
+                        <label for="status">Status</label>
+                            <select id="status">
+                                <option value="1">New</option>
+                                <option value="2">Pending</option>
+                                <option value="3">Done</option>
+                            </select>
+                        <button type="submit">Update task</button>
+                    </form>
+                </div>
+            </div>
+            <script src="js/home.js"></script>
         `;
     }
 }
