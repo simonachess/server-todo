@@ -1,0 +1,76 @@
+/* base */
+@import '../base/reset.css';
+@import '../base/variables.css';
+@import '../base/layout.css';
+@import '../base/base.css';
+
+/* 3rd-party */
+
+/* components */
+@import '../components/button.css';
+@import '../components/table.css';
+@import '../components/form.css';
+
+/* CUSTOM PAGE STYLE */
+
+/* home */
+
+.tasks-container {
+	width: 800px;
+	height: max-content;
+	background: #212121;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: start;
+	padding: 60px 30px;
+	border-radius: 30px;
+	box-shadow: rgba(30, 30, 31, 0.842) 0px 8px 24px, rgba(80, 80, 82, 0.644) 0px 16px 56px,
+		rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.tasks-container h1,
+a,
+table {
+	margin-bottom: 40px;
+}
+
+table button {
+	padding: 5px 10px;
+	text-decoration: none;
+	border-radius: 15px;
+	color: rgb(78, 76, 76);
+	width: max-content;
+	border: 3px solid transparent;
+	margin: 0 5px;
+	letter-spacing: 1px;
+	font-family: inherit;
+}
+
+table .btn-update {
+	background: #88f184;
+	box-shadow: #88f184 0px 1px 20px 2px;
+}
+
+table .btn-update:hover {
+	box-shadow: #88f184 0px 1px 20px 5px, #88f1847e 0px -1px 24px, rgb(197 199 199 / 10%) 0px 0px 56px;
+	background: rgb(78, 76, 76);
+	color: #88f184;
+	border: 3px solid #88f184;
+}
+
+table .btn-delete {
+	background: #f16c89;
+	box-shadow: #f16c89 0px 1px 20px 2px;
+}
+
+table .btn-delete:hover {
+	box-shadow: #f16c89 0px 1px 20px 5px, #f16c89cc 0px -1px 24px, rgb(197 199 199 / 10%) 0px 0px 56px;
+	background: rgb(78, 76, 76);
+	color: #f16c89;
+	border: 3px solid #f16c89;
+}
+
+table {
+	box-shadow: #f8f6f6 0px 1px 10px 0px, #f8f6f7a4 0px -1px 24px, rgb(197 199 199 / 10%) 0px 0px 56px;
+}

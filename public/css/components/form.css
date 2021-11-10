@@ -1,0 +1,86 @@
+form {
+	width: 300px;
+	gap: 10px;
+	display: flex;
+	flex-direction: column;
+	letter-spacing: inherit;
+}
+
+textarea {
+	resize: vertical;
+	min-height: 80px;
+	max-height: 210px;
+	padding: 10px;
+	background-color: rgb(202, 250, 245);
+	box-shadow: rgb(255 253 253 / 77%) 0px 1px 20px 2px;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+	font-family: inherit;
+	margin-bottom: 10px;
+	position: relative;
+	color: gray;
+}
+
+textarea:focus {
+	background: rgb(255 205 243);
+	box-shadow: rgb(255 205 243) 0px 1px 20px 5px, rgb(202 250 245 / 78%) 0px -1px 24px,
+		rgb(197 199 199 / 10%) 0px 0px 56px;
+	outline: none;
+	border: none;
+}
+
+form button {
+	margin: 20px 0;
+	width: max-content;
+	background: #14ffec;
+	color: rgb(78, 76, 76);
+	padding: 10px 20px;
+	border: 3px solid transparent;
+	border-radius: 20px 50px 10px 50px;
+	box-shadow: #14ffec 2px 2px 15px;
+	font-family: inherit;
+	letter-spacing: 1px;
+	margin-top: 30px;
+	outline: none;
+}
+
+form button:hover {
+	box-shadow: #14ffec 0px 1px 20px 5px, rgb(202 250 245 / 78%) 0px -1px 24px, rgb(197 199 199 / 10%) 0px 0px 56px;
+	color: #14ffec;
+	background: rgb(78, 76, 76);
+	border: 3px solid #14ffec;
+	outline: none;
+}
+
+select {
+	width: 100px;
+	box-shadow: rgb(255 253 253 / 77%) 0px 1px 20px 2px;
+	display: inline-block;
+	background: rgb(202, 250, 245);
+	outline: none;
+	font-family: inherit;
+	color: rgb(78, 76, 76);
+}
+
+option:not(:checked) {
+	background-color: rgb(202, 250, 245);
+}
+
+option {
+	outline: none;
+}
+
+.container {
+	width: 430px;
+	height: 700px;
+	background: #212121;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	box-shadow: rgba(30, 30, 31, 0.842) 0px 8px 24px, rgba(80, 80, 82, 0.644) 0px 16px 56px,
+		rgba(17, 17, 26, 0.1) 0px 24px 80px;
+	position: absolute;
+}
